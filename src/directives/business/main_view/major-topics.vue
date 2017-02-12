@@ -1,13 +1,12 @@
 <template>
   <div class="wrapper">
-    <h4 class="title" v-pull-up-refresh>This is major topics.</h4>
+    <h4 class="title">This is major topics.</h4>
     <topic-list
-      v-pull-up-refresh
       class="major-topic-list"
       :topics="topics"
-      @touchstart.native="handleTouchStart"
-      @touchmove.native="handleTouchMove"
-      @touchend.native="handleTouchEnd">
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd">
         
     </topic-list>
   </div>
@@ -69,17 +68,17 @@
       };
     },
     methods: {
-      handleTouchStart(evt) {
+      handleTouchStart() {
         // eslint-disable-next-line
-        false && console.log('touch start', evt);
+        console.log('touch start');
       },
-      handleTouchMove(evt) {
+      handleTouchMove() {
         // eslint-disable-next-line
-        false && console.log('touch move', evt);
+        console.log('touch move');
       },
-      handleTouchEnd(evt) {
+      handleTouchEnd() {
         // eslint-disable-next-line
-        false && console.log('touch end', evt);
+        console.log('touch end');
       },
     },
     components: {
@@ -105,8 +104,6 @@
   }
 
   .wrapper > .major-topic-list {
-    position: absolute;
-    top: 47px;
     width: 100%;
     height: calc(100% - 40px - 7px);
     overflow-x: hidden;

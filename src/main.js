@@ -8,6 +8,8 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+import './directives/pull-up-refresh';
+
 Vue.use(KeenUI);
 
 /* import basic stylesheets */
@@ -29,7 +31,7 @@ new Vue({
   components: { App },
 });
 
-Vue.config.errorHandler = function (error) {
+Vue.config.errorHandler = function handler(error) {
   /* eslint-disable no-console */
   console.log(error);
 };
