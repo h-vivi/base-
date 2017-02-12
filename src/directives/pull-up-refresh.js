@@ -45,7 +45,6 @@ const bind = function() {
       // console.log('moving', evt);
       const touch = evt.touches[0];
       const pageY = touch.pageY;
-      console.log(prevPos.top, pageY, prevTouchPos.pageY);
 
       const addedTop = prevPos.top + pageY - prevTouchPos.pageY;
       prevPos.top = addedTop < prevPos.top ? prevPos.top : addedTop;
@@ -53,7 +52,6 @@ const bind = function() {
       prevTouchPos.pageY = pageY;
 
       el.style.top = prevPos.top + 'px';
-      console.log(el.style.top, prevPos.top);
     });
     el.addEventListener('touchend', function(evt) {
       if (hasMoved) {
