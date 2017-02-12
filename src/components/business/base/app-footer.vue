@@ -24,7 +24,7 @@
     data() {
       return {
         routes: [
-          { name: 'Topics', to: '/major-topics' },
+          { name: 'Hots', to: '/major-topics' },
           { name: 'Focus', to: '/focus' },
           { name: 'Messages', to: '/messages' },
           { name: 'Me', to: '/me' },

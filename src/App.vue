@@ -21,14 +21,22 @@
 
 <style>
   #app {
+    width: 100%;
+    height: 100%;
     font-family: Consolas, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
   }
 
-  #app .app-footer {
+  #app > .container {
+    height: calc(100% - 40px);
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #app > .app-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
