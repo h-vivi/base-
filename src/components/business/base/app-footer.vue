@@ -15,6 +15,14 @@
         </router-link>
       </li>
     </ul>
+    <!-- no use of @click -->
+    <!-- <ui-tabs>
+      <ui-tab
+        v-for="route in routes"
+        :title="route.name"
+        @click.native="handleTabItemClick(route)">
+      </ui-tab>
+    </ui-tabs> -->
   </footer>
 </template>
 
@@ -30,6 +38,11 @@
           { name: 'Me', to: '/me' },
         ],
       };
+    },
+    methods: {
+      handleTabItemClick(route) {
+        this.$router.push(route.to);
+      },
     },
   };
 </script>
@@ -64,5 +77,6 @@
     display: inline-block;
     width: 100%;
     cursor: pointer;
+    text-transform: uppercase;
   }
 </style>
